@@ -28,3 +28,4 @@ stage('Remove Previous Container'){
    sh 'docker run -d -p 8090:8080 --name tomcattest vickydevendran/calculator:0.0.1' 
    }
 }
+}
