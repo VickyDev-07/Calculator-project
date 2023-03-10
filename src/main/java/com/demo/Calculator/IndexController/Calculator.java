@@ -21,7 +21,7 @@ public class Calculator {
     public ModelAndView add(DataStore data){
         rep.save(data);
         ModelAndView mav=new ModelAndView("addition");
-      int value= data.getNum1()+ data.getNum2();
+      Double value= data.getNum1()+ data.getNum2();
       mav.addObject("num1",data.getNum1());
         mav.addObject("num2",data.getNum2());
         mav.addObject("additionValue",value);
@@ -31,7 +31,7 @@ public class Calculator {
     public ModelAndView sub(DataStore data){
         rep.save(data);
         ModelAndView mav=new ModelAndView("Subtraction");
-        int value= data.getNum1()- data.getNum2();
+        Double value= data.getNum1()- data.getNum2();
         mav.addObject("num1",data.getNum1());
         mav.addObject("num2",data.getNum2());
         mav.addObject("subValue",value);
@@ -41,7 +41,7 @@ public class Calculator {
     public ModelAndView multiply(DataStore data){
         rep.save(data);
         ModelAndView mav=new ModelAndView("multiplication");
-       int value= data.getNum1()*data.getNum2();
+       Double value= data.getNum1()*data.getNum2();
         mav.addObject("num1",data.getNum1());
         mav.addObject("num2",data.getNum2());
         mav.addObject("multiValue",value);
@@ -51,7 +51,7 @@ public class Calculator {
     public ModelAndView division(DataStore data){
         rep.save(data);
         ModelAndView mav=new ModelAndView("division");
-       int value = 0;
+       double value = 0;
        String str = null;
         if(data.getNum2()==0){
          str="Cannot divided by Zero";
